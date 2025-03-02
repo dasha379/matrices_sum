@@ -7,10 +7,15 @@
 int main(){
     int n = 4, m = 5;
     int matrixSize = n * m;
-    std::vector<int> a(matrixSize, 1);
-    std::vector<int> b(matrixSize, 2);
+    std::vector<int> a(matrixSize);
+    std::vector<int> b(matrixSize);
     std::vector<int> c(matrixSize);
-
+    for (int i = 0; i < n; ++i){
+        for (int j = 0; j < m; ++j){
+            a[i*m + j] = rand() % 20;
+            b[i * m + j] = rand() % 20;
+        }
+    }
 
     std::vector<cl::Platform> platforms;
     cl::Platform::get(&platforms);
@@ -48,6 +53,20 @@ int main(){
     queue.enqueueNDRangeKernel(kernel, cl::NullRange, cl::NDRange(n, m));
     queue.enqueueReadBuffer(bufferC, CL_TRUE, 0, sizeof(int) * matrixSize, c.data());
 
+    for (int i = 0; i < n; ++i){
+        for (int j = 0; j < m; ++j){
+            std::cout << a[i*m+ j] << " ";
+        }
+        std::cout << std::endl;
+    }
+    std::cout << std::endl;
+    for (int i = 0; i < n; ++i){
+        for (int j = 0; j < m; ++j){
+            std::cout << b[i*m+ j] << " ";
+        }
+        std::cout << std::endl;
+    }
+    std::cout << std::endl;
 
     for (int i = 0; i < n; ++i){
         for (int j = 0; j < m; ++j){
