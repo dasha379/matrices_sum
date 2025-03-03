@@ -8,8 +8,6 @@ find_package(OpenCL REQUIRED)
 include_directories(${OpenCL_INCLUDE_DIRS})
 find_package(Boost REQUIRED)   
 
-set(GTEST_ROOT /usr/local)
-
 find_package(GTest REQUIRED)
 include_directories(${GTEST_INCLUDE_DIRS})
 
