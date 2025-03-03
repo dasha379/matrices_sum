@@ -12,7 +12,7 @@ void matrices_sum(const std::vector<int> & a, const std::vector<int> & b, std::v
   }
 }
 
-TEST(matrciesSumTest, Basic){
+TEST(matricesSumTest, Basic){
   const int n = 3;
   const int m = 3;
   std::vector<int> a = {1, 2, 3, 4, 5, 6, 7, 8, 9};
