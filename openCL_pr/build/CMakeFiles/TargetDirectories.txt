@@ -1,4 +1,0 @@
-/home/dasha/openCL_pr/build/CMakeFiles/tests.dir
-/home/dasha/openCL_pr/build/CMakeFiles/test.dir
-/home/dasha/openCL_pr/build/CMakeFiles/edit_cache.dir
-/home/dasha/openCL_pr/build/CMakeFiles/rebuild_cache.dir
